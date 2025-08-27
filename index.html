@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Mastery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>JavaScript Mastery Project</h1>
+
+    <section id="part1">
+      <h2>Part 1: Basics</h2>
+      <input type="number" id="ageInput" placeholder="Enter your age" />
+      <button onclick="checkAge()">Check Age</button>
+      <p id="ageResult"></p>
+    </section>
+
+    <section id="part2">
+      <h2>Part 2: Functions</h2>
+      <script>
+        function calculateSum() {
+          let number1 = document.getElementById("num1").value;
+          let number2 = document.getElementById("num2").value;
+          let sum = Number(number1) + Number(number2);
+          document.getElementById("sumResult").innerHTML = "The sum is: " + sum;
+        }
+      </script>
+      <input type="number" id="num1" placeholder="Enter first number" />
+      <input type="number" id="num2" placeholder="Enter second number" />
+      <button onclick="calculateSum()">Calculate Sum</button>
+      <p id="sumResult"></p>
+      <button onclick="toggleMessage()">Toggle Message</button>
+      <p id="toggleText">Hello, Is this visible?</p>
+    </section>
+    <section id="part3">
+      <h2>Part 3: Loops</h2>
+      <button onclick="listItems()">List Items</button>
+      <ul id="itemList"></ul>
+      <button onclick="startCountdown()">Start Countdown</button>
+      <p id="countdownDisplay"></p>
+    </section>
+
+    <section id="part4">
+      <h2>Part 4: DOM Manipulation</h2>
+      <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+      <button
+        type="button"
+        onclick="document.getElementById('demo').style.fontSize='35px'"
+      >
+        Click Me!
+      </button>
+      <button onclick="addNewElement()">Add New Element</button>
+      <button onclick="toggleClass()">Toggle Class</button>
+      <p id="domText">Hey, watch this!</p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
